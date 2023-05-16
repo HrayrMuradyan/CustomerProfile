@@ -10,10 +10,6 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
-
-test_requirements = [ ]
-
 setup(
     author="Hrayr Muradyan",
     author_email='hrayrmuradyan20@gmail.com',
@@ -28,8 +24,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
+    install_requires=['pandas', 'numpy', 'scikit-learn', 'matplotlib'],
     description="An easy-to-use package for customer profile creation in Python.",
-    install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
@@ -37,8 +33,7 @@ setup(
     name='CustomerProfile',
     packages=find_packages(include=['CustomerProfile', 'CustomerProfile.*']),
     test_suite='tests',
-    tests_require=test_requirements,
     url='https://github.com/HrayrMuradyan/CustomerProfile',
-    version='0.1.0',
+    version='0.1.1',
     zip_safe=False,
 )
